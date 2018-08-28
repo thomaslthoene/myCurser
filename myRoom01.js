@@ -115,5 +115,4 @@ if (candleLit===false && userInput==="look around"){
 }
 
 let submit = document.getElementById("submit-button");
-submit.addEventListener("click", roomTemplate);
-
+    submit.addEventListener("click", roomTemplate);
