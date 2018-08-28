@@ -65,7 +65,6 @@ if (candleLit===false && userInput==="look around"){
 
 }else if (candleLit===true && userInput==="look around"){
     window.alert("In the dim light you can make out four walls - brick.  The corners glisten with seeping water");
-    window.alert("You are facing " + currentDirection);
 
 }else if (userInput==="inventory"){
     window.alert("you have a small candle and a lighter.  As you light the candle, the room takes shape around you.");
@@ -74,23 +73,19 @@ if (candleLit===false && userInput==="look around"){
 }else if (candleLit=true && userInput==="face north"){
    currentDirection="north";
    window.alert(faceNorthResponse);
-   window.alert("You are now facing " + currentDirection);
 
 }else if (candleLit=true && userInput==="face east"){
     currentDirection="east";
     window.alert(faceEastResponse);
-    window.alert("You are now facing " + currentDirection);
     hasKey01=true; 
 
 }else if (candleLit=true && userInput==="face south"){
     currentDirection="south";
     window.alert(faceSouthResponse);
-    window.alert("You are now facing " + currentDirection);
 
 }else if (candleLit=true && userInput==="face west"){
     currentDirection="west";
     window.alert(faceWestResponse);
-    window.alert("You are now facing " + currentDirection);
 
 }else if (currentDirection==="west" && hasKey01==true && userInput==="use key"){
     window.alert(response01);
