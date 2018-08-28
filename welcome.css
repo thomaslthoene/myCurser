@@ -1,0 +1,65 @@
+.alert{
+    background-color:pink;
+}
+
+
+img {
+    width: 350px;
+    float: right;
+    border: 1px solid silver;
+    margin: 65px 10px 15px 15px;
+}
+
+.red{
+    color: rgb(107, 0, 0);
+}
+
+body,
+html {
+    background: url(background-parchment.jpg); background-repeat:no-repeat; background-attachment: fixed; background-size:100% 100%
+
+}
+
+h1,
+h2 {
+    font-family: 'Creepster', cursive;
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    color: rgb(19, 1, 1);
+
+    margin-top: -20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+ 
+.container {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+img {
+    width: 350px;
+    float: right;
+    border: 1px solid silver;
+    margin: 65px 10px 15px 15px;
+
+}
+
+p {
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+a {
+    color: #49BBAC;
+}
