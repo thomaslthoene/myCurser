@@ -68,8 +68,7 @@ if (candleLit===false && userInput==="look around"){
     window.alert("You are facing " + currentDirection);
 
 }else if (userInput==="inventory"){
-    window.alert("you have a small candle and a lighter.  As you flick the lighter, the room takes shape around you.");
-    window.alert("You are now facing " + currentDirection);
+    window.alert("you have a small candle and a lighter.  As you light the candle, the room takes shape around you.");
     candleLit=true;
 
 }else if (candleLit=true && userInput==="face north"){
