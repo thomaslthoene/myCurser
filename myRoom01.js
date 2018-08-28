@@ -116,10 +116,10 @@ if (candleLit===false && userInput==="look around"){
 
 }else if (candleLit===false && userInput==="use door"){
     window.alert("What door?! You can't see anything");
-    /* window.location.href = "/Users/ProgClass/Documents/codeslo/mycode/Week-07/1Monday/curser/myRoom02.html"; */
 
 }else if (currentDirection==="west" && doorOpen===true && userInput==="use door"){
     window.alert("You step to the cavernous opening before you.  A breeze whistles from beyond the light of you candle.  If you knew where you were...WHO you were, you might think this was a grand adventure.  As it is though, it seems like certain death.  Welcome To Curser.");
+   
     /* window.location.href = "/Users/ProgClass/Documents/codeslo/mycode/Week-07/1Monday/curser/myRoom02.html"; */
 
 }else return window.alert("You cannot do that here");
