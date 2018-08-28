@@ -96,10 +96,6 @@ if (candleLit===false && userInput==="look around"){
 }else if (currentDirection==="west" && hasKey01==true && userInput==="use key"){
     window.alert(response01);
     doorUnlocked=true;
-    hasKey01=false;
-
-}else if (doorUnlocked===true && hasKey01===false && userInput==="use key"){
-    window.alert("You don't have any more - the door is already unlocked");
 
 }else if (currentDirection!=="west" && hasKey01===false && userInput==="use key"){
     window.alert("Neither are you facing the door, nor do you have a key");
