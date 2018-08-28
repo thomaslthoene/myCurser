@@ -114,5 +114,6 @@ if (candleLit===false && userInput==="look around"){
 }else return window.alert("You cannot do that here");
 }
 
-let submit = document.getElementById("playerMove");
-    submit.addEventListener("click", roomTemplate);
+let submit = document.getElementById("submit-button");
+submit.addEventListener("click", roomTemplate);
+
