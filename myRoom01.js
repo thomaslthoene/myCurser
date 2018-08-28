@@ -70,24 +70,24 @@ if (candleLit===false && userInput==="look around"){
     window.alert("you have a small candle and a lighter.  As you light the candle, the room takes shape around you.");
     candleLit=true;
 
-}else if (candleLit=true && userInput==="face north"){
+}else if (candleLit===true && userInput==="face north"){
    currentDirection="north";
    window.alert(faceNorthResponse);
 
-}else if (candleLit=true && userInput==="face east"){
+}else if (candleLit===true && userInput==="face east"){
     currentDirection="east";
     window.alert(faceEastResponse);
     hasKey01=true; 
 
-}else if (candleLit=true && userInput==="face south"){
+}else if (candleLit===true && userInput==="face south"){
     currentDirection="south";
     window.alert(faceSouthResponse);
 
-}else if (candleLit=true && userInput==="face west"){
+}else if (candleLit===true && userInput==="face west"){
     currentDirection="west";
     window.alert(faceWestResponse);
 
-}else if (currentDirection==="west" && hasKey01==true && userInput==="use key"){
+}else if (currentDirection==="west" && hasKey01===true && userInput==="use key"){
     window.alert(response01);
     doorUnlocked=true;
 
