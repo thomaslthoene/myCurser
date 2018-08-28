@@ -20,7 +20,6 @@ let faceNorthResponse="You are now facing North.  Scrawled on the crumbling bric
 let faceEastResponse="You are now facing East.  Something gleams in the dim light. You have found a key.";
 let faceSouthResponse="You are now facing South.  Someone has sprayed griffiti here.  It says, \"look away from dixieland\"";
 let faceWestResponse="A giant locked iron door bars your progress.  It looks as though it hasn't been opened in ages";
-let punchSphinx="The sphinx awakens.  Inhaling deeply, he exhales riddle."
 /*
 Available commands are:
 1 "face north"
