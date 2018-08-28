@@ -41,7 +41,7 @@ function checkData() {
 }
 */
 function linkPage() {
-    return window.location.assign("file:///C:/Users/User/Documents/codeslo/curser/template.html");
+    return window.location.assign("/Users/ProgClass/Documents/codeslo/mycode/Week-07/1Monday/curser/myCurser/myRoom01.html");
 }
 
 //redButton.addEventListener('click', makeRed);
