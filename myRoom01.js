@@ -105,7 +105,7 @@ if (candleLit===false && userInput==="look around"){
     window.alert("The door is already open"); 
 
 }else if (currentDirection==="west" && doorOpen===true && userInput==="use door"){
-    window.alert("You step to the cavernous opening before you.  A breeze whistles from beyond the light of you candle.  If you knew where you were...WHO you were, you might think this was a grand adventure.  As it is though, it seems like certain death.  Welcome To Curser.");
+    window.alert("You step to the cavernous opening before you.  A breeze whistles from beyond the light of you candle.  If you knew where you were...WHO you were, you might think this was a grand adventure.  As it is though, it seems like certain death.  Welcome To The Curser.");
 
 
    
