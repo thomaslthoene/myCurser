@@ -19,7 +19,7 @@ let response03="You don't have a key!";
 let faceNorthResponse="You are now facing North.  Hundreds of scratch marks mar the plaster";
 let faceEastResponse="You are now facing East.  Something gleams in the dim light. You have found a key.";
 let faceSouthResponse="You are now facing South.  Someone has sprayed griffiti here.  It says, \"look away from dixieland\"";
-let faceWestResponse="A door of iron bars.  It looks as though it hasn't been opened in ages";
+let faceWestResponse="A door of iron bars.  It looks as though it hasn't been opened in ages.  Even though the stairs beyond it lead downward, this appears to be the only exit from your room";
 /*
 Available commands are:
 1 "face north"
@@ -111,7 +111,7 @@ if (candleLit===false && userInput==="look around"){
     window.alert("The door is already open"); 
 
 }else if (currentDirection==="west" && doorOpen===true && userInput==="use door"){
-    window.alert("You step to the cavernous opening before you.  A breeze whistles from beyond the light of you candle.  If you knew where you were...WHO you were, you might think this was a grand adventure.  As it is though, it seems like certain death.  Welcome To The Curser.");
+    window.alert("You step to the cavernous opening before you.  A breeze whistles from beyond the light of your candle.  If you knew where you were...WHO you were, you might think this was a grand adventure.  As it is, it feels like certain death.  You take the first halting step down...Welcome To The Curser.");
 
 
    
