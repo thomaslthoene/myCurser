@@ -2,12 +2,9 @@
     background-color:pink;
 }
 
-
 img {
-    width: 350px;
-    float: right;
-    border: 1px solid silver;
-    margin: 65px 10px 15px 15px;
+    width: 400px;
+  
 }
 
 .red{
@@ -16,38 +13,31 @@ img {
 
 body,
 html {
-    background: url(background-parchment.jpg); background-repeat:no-repeat; background-attachment: fixed; background-size:100% 100%
-
+    background: url(background-parchment.jpg); 
+    background-repeat:no-repeat; 
+    background-attachment: fixed; 
+    background-size:100% 100%;
+    
 }
 
 h1,
 h2 {
-    font-family: 'Creepster', cursive;
+    font-family: 'Creepster';
 }
 
 h1 {
     font-size: 80px;
     text-align: center;
     color: rgb(19, 1, 1);
-
     margin-top: -20px;
     padding-top: 50px;
-    padding-bottom: 50px;
-
 }
  
 .container {
+    vertical-align: 0%;
     width: 50%;
     text-align: center;
-    margin: 0 auto;
-}
-
-img {
-    width: 350px;
-    float: right;
-    border: 1px solid silver;
-    margin: 65px 10px 15px 15px;
-
+    margin: 0px auto;
 }
 
 p {
@@ -62,4 +52,9 @@ h2 {
 
 a {
     color: #49BBAC;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
