@@ -16,10 +16,10 @@ let response02="The hinges wail in deathly squeals...the rust of ages breaking f
 let response03="You don't have a key!";
 
 //gameplay responses.  They should follow the appropriate command entered.  For instance, if user enters "face north", add "return faceNorthResponse"
-let faceNorthResponse="You are now facing North.  Scrawled on the crumbling brick is the number 13";
+let faceNorthResponse="You are now facing North.  Hundreds of scratch marks mar the plaster";
 let faceEastResponse="You are now facing East.  Something gleams in the dim light. You have found a key.";
 let faceSouthResponse="You are now facing South.  Someone has sprayed griffiti here.  It says, \"look away from dixieland\"";
-let faceWestResponse="A giant locked iron door bars your progress.  It looks as though it hasn't been opened in ages";
+let faceWestResponse="A door of iron bars.  It looks as though it hasn't been opened in ages";
 /*
 Available commands are:
 1 "face north"
@@ -37,6 +37,7 @@ Available commands are:
 13 "pickup shovel"
 14 "use shovel"
 */
+let mainImage="curserE.png";
 
 function roomTemplate(){
 
@@ -46,7 +47,7 @@ function roomTemplate(){
 //these are the basic "face" (direction) commands and the results they should display.
 if (candleLit===false && userInput==="look around"){
     window.alert("You cannot see a thing.  It is pitch black.");
-
+    
 }else if (candleLit===false && userInput==="face north"){
     window.alert("You cannot see a thing.  It is pitch black.");
     currentDirection="north";
@@ -65,14 +66,17 @@ if (candleLit===false && userInput==="look around"){
 
 }else if (candleLit===true && userInput==="look around"){
     window.alert("In the dim light you can make out four walls - brick.  The corners glisten with seeping water");
+    img01.src = "lookAround.jpg";
 
 }else if (userInput==="inventory"){
+    img01.src = "darkBrick.jpeg";
     window.alert("you have a small candle and a lighter.  As you light the candle, the room takes shape around you.");
     candleLit=true;
 
 }else if (candleLit===true && userInput==="face north"){
-   currentDirection="north";
-   window.alert(faceNorthResponse);
+    currentDirection="north";
+    window.alert(faceNorthResponse);
+    img01.src = "scratchMarks.jpeg";
 
 }else if (candleLit===true && userInput==="face east"){
     currentDirection="east";
@@ -82,10 +86,12 @@ if (candleLit===false && userInput==="look around"){
 }else if (candleLit===true && userInput==="face south"){
     currentDirection="south";
     window.alert(faceSouthResponse);
+    img01.src = "base1.jpg";
 
 }else if (candleLit===true && userInput==="face west"){
     currentDirection="west";
     window.alert(faceWestResponse);
+    img01.src = "ironBar.jpg";
 
 }else if (currentDirection==="west" && hasKey01===true && userInput==="use key"){
     window.alert(response01);
@@ -113,6 +119,8 @@ if (candleLit===false && userInput==="look around"){
 
 }else return window.alert("You cannot do that here");
 }
+
+
 
 let submit = document.getElementById("submit-button");
 submit.addEventListener("click", roomTemplate);
