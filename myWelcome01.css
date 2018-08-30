@@ -1,12 +1,12 @@
 @import url(http://weloveiconfonts.com/api/?family=iconicfill);
-@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Kosugi);
 /* iconicfill */
 [class*="iconicfill-"]:before {
   font-family: 'IconicFill', sans-serif;
 }
 
 body,html{width:100%;height:100%;}
-body{font-family:'Arvo'; background: #4f3b5b;background: -moz-radial-gradient(center, ellipse cover,  #4f3b5b 0%, #231733 100%);background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4f3b5b), color-stop(100%,#231733));background: -webkit-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: -o-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: -ms-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: radial-gradient(ellipse at center,  #4f3b5b 0%,#231733 100%);}
+body{font-family:'Kosugi'; background: #4f3b5b;background: -moz-radial-gradient(center, ellipse cover,  #4f3b5b 0%, #231733 100%);background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4f3b5b), color-stop(100%,#231733));background: -webkit-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: -o-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: -ms-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: radial-gradient(ellipse at center,  #4f3b5b 0%,#231733 100%);}
 
 .center{
  top:50%;
@@ -18,7 +18,7 @@ input{
   display:block;
     width: 200px;
     padding: 15px 0 15px 12px;
-    font-family: "Arvo";
+    font-family: "Kosugi";
     font-weight: 400;
     color: #377D6A;
     background: rgba(0,0,0,0.3);
@@ -45,7 +45,7 @@ label{
     margin: 0;
     padding: 0;
     color:#fff;
-    font-family: 'Arvo';
+    font-family: 'Kosugi';
     font-size: 16px;
 }
 
@@ -90,7 +90,7 @@ img {
 
 body,
 html {
-    background: url(background-parchment.jpg); 
+    background: url(monitor.jpg); 
     background-repeat:no-repeat; 
     background-attachment: fixed; 
     background-size:100% 100%;
@@ -99,13 +99,13 @@ html {
 
 h1,
 h2 {
-    font-family: 'Creepster';
+    font-family: 'Kosugi';
 }
 
 h1 {
     font-size: 80px;
     text-align: center;
-    color: rgb(141, 0, 0);
+    color: rgb(30, 68, 26);
     margin-top: -20px;
     padding-top: 50px;
 }
@@ -118,7 +118,7 @@ h1 {
 }
 
 p {
-    font-family: 'Creepster';
+    font-family: 'Kosugi';
     font-size: 26px;
     text-align: center;
 }
@@ -138,9 +138,9 @@ a {
 .button {
     display: inline-block;
     border-radius: 4px;
-    background-color: #6b1900;
+    background-color: #264b2a;
     border: none;
-    color: #FFFFFF;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 12px;
     padding: 20px;
