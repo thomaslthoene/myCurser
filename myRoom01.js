@@ -19,13 +19,13 @@ function timer() {
         clearInterval(counter);
         return;
     }
-    document.getElementById("timer").innerHTML = 'Next refresh in ' + minutes + ':' + seconds + ' ';
+    document.getElementById("timer").innerHTML = 'death in ' + minutes + ':' + seconds + ' ';
     if (count === 0) {
         location.reload();
     }
 }
 
-//the player's inventory.  edit to equal "true" if it makes sense to your room.  There are opportunities to change these later based on player actions later in the function.
+//the prisoner's inventory.  edit to equal "true" if it makes sense to your room.  There are opportunities to change these later based on player actions later in the function.
 let hasShovel = false;
 let hasKey01 = false;
 let hasKey02 = false;
@@ -33,11 +33,22 @@ let hasKey03 = false;
 let doorUnlocked=false;
 let doorOpen=false;
 let candleLit=false;
+currentGender="female";
+pronounOne="she";
+pronounTwo="her";
 
 //current direction.  edit to equal player's direction on entering the room.  for instance, if they exit the previous room through a door in the north wall, they are still facing north in the new room.
 currentDirection="North";
 let currentVictim=(Math.floor(Math.random() * 9) + 5)
-let currentVictimStatement=("You have activated the game.  Prisoner " + currentVictim + " is now in the room.  Try not to let them die");
+
+    if (currentVictim%2===0){
+        currentGender="male";
+        pronounOne="he";
+        pronounTwo="him";
+    }
+
+
+let currentVictimStatement=("You have activated the game.  Prisoner " + currentVictim + " is now in the room.  Try not to let " + pronounTwo + " die");
 window.alert(currentVictimStatement);
 
 //storyline progress responses.  these will change based on the story of your room.  For instance, if the clue for the end game is on the west wall and they enter "face west", the response string may equal "the numbers 1 and 2 are scrawled on the wall in brownish red liquid.  Could it be blood?"
@@ -73,7 +84,7 @@ function roomTemplate(){
 
     let moveData = document.getElementById("playerMove");
     let userInput = moveData.value;
-    
+
 //these are the basic "face" (direction) commands and the results they should display.
 if (candleLit===false && userInput==="look around"){
     
