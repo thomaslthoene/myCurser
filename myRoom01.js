@@ -20,7 +20,7 @@ function timer() {
         clearInterval(counter);
         return;
     }
-    document.getElementById("timer").innerHTML = 'death in ' + minutes + ':' + seconds + ' ';
+    document.getElementById("timer").innerHTML = minutes + ':' + seconds + ' ';
     if (count === 0) {
         location.reload();
     }
