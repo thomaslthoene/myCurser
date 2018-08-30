@@ -26,14 +26,14 @@ function timer() {
     }
 }
 
-//the prisoner's current circumstance.  Changed later based on player actions later in the function.
-let hasShovel = false;
-let hasKey01 = false;
-let hasKey02 = false;
-let hasKey03 = false;
-let doorUnlocked=false;
-let doorOpen=false;
-let candleLit=false;
+//the prisoner's opening circumstance.  Changed later based on player actions later in the function.
+hasKey01 = false;
+hasKey02 = false;
+hasKey03 = false;
+doorUnlocked=false;
+doorOpen=false;
+candleLit=false;
+hasShovel = false;
 currentGender="female";
 heShe="she";
 heSheCapital="She"; //for use at sentence start
@@ -41,7 +41,7 @@ himHer="her";
 himHerCapital="Her";
 currentDirection="North";
 
-//gender, set with a random number which then redefines pronouns for future strings.
+//gender, set with a random number which then redefines pronouns for future strings based on even/odd.
 let currentPrisoner=(Math.floor(Math.random() * 100))
 
     if (currentPrisoner%2===0){
@@ -51,19 +51,20 @@ let currentPrisoner=(Math.floor(Math.random() * 100))
         himHer=himHer="Him";
     }
 
-let currentPrisonerStatement=("You have activated the game.  Prisoner " + currentPrisoner + " is now in the room.  Try not to let this one die.");
+//opening alert
+let currentPrisonerStatement=("You have activated the game and Prisoner " + currentPrisoner + " is now in the room.  \n\nTry not to let this one die.\n \n;^]");
 window.alert(currentPrisonerStatement);
 
 //storyline progress responses.  
 let response01="The door is now unlocked";
-let response02="The hinges squeal...the rust of ages breaking free.  A dark doorway stands before " + himHer + ". " + heSheCapital + " seems unwilling to move forward ;)";
+let response02="The hinges squeal...the rust of ages breaking free.  \nA dark doorway stands before " + himHer + ", but " + heShe + " seems unwilling to move forward.  I wonder why?\n\n ;^]";
 let response03=heSheCapital + " doesn't have a key!";
 
-//gameplay responses.  They should follow the appropriate command entered.  For instance, if user enters "face north", add "return faceNorthResponse"
-faceNorthResponse=heSheCapital + " is now facing North.  Hundreds of scratch marks mar the plaster";
-faceEastResponse=heSheCapital + " is now facing East.  Something gleams in the dim light. " + heSheCapital + " has found a key. ";
-faceSouthResponse=heSheCapital + " is now facing South.  Someone has sprayed griffiti here.  It says, \"look away from dixieland\"";
-faceWestResponse=heSheCapital + " is now facing west.  " + heSheCapital + " sees a locked door of iron bars.  Beyond it stairs...leading downward";
+//gameplay responses.   
+faceNorthResponse=heSheCapital + " is now facing North.  \nScratch marks mar the plaster.";
+faceEastResponse=heSheCapital + " is now facing East.  \nSomething gleams in the dim light. " + heSheCapital + " has found a key. ";
+faceSouthResponse=heSheCapital + " is now facing South.  \nSomeone has sprayed griffiti here.  \nIt says, \"look away from dixieland\"";
+faceWestResponse=heSheCapital + " is now facing west.  \n" + heSheCapital + " sees a locked door of iron bars.  Beyond it stairs...\nleading downward";
 
 function roomTemplate(){
 
@@ -78,39 +79,39 @@ if (candleLit===false && userInput==="look around"){
     return window.alert(heSheCapital + " cannot see a thing.  It is pitch black.");
 
 }else if (candleLit===false && userInput==="walk north"){
-    window.alert("No.  You've killed " + himHer + ".  " + heSheCapital + " couldn't see our 'surprise.'  Not smart to move about in the dark.");
+    window.alert("No.  \nYou've killed " + himHer + ".  " + heSheCapital + " couldn't see our 'surprise.'  \n\nNot smart to move about in the dark.\n");
     location.reload();
 
 }else if (candleLit===false && userInput==="face east"){
-    return window.alert(heSheCapital + " cannot see a thing.  It is pitch black.");
+    return window.alert(heSheCapital + " cannot see a thing.  \nIt is pitch black.");
 
 }else if (candleLit===false && userInput==="walk east"){
-    window.alert("No.  You've killed " + himHer + ".  " + heSheCapital + " couldn't see our 'surprise.'  Not smart to move about in the dark.");
+    window.alert("No.  \nYou've killed " + himHer + ".  \n" + heSheCapital + " couldn't see our 'surprise.'  \n\nNot smart to move about in the dark.\n");
     location.reload();
 
 }else if (candleLit===false && userInput==="face south"){
-    return window.alert(heSheCapital + " cannot see a thing.  It is pitch black.");
+    return window.alert(heSheCapital + " cannot see a thing.  \nIt is pitch black.");
 
 }else if (candleLit===false && userInput==="walk south"){
-    window.alert("No.  You've killed " + himHer + ".  " + heSheCapital + " couldn't see our 'surprise.'  Not smart to move about in the dark.");
+    window.alert("No.  \nYou've killed " + himHer + ".  \n" + heSheCapital + " couldn't see our 'surprise.'  \n\nNot smart to move about in the dark. \n");
     location.reload();
 
 }else if (candleLit===false && userInput==="face west"){
-    return window.alert(heSheCapital + " cannot see a thing.  It is pitch black.");
+    return window.alert(heSheCapital + " cannot see a thing.  \nIt is pitch black.");
 
 }else if (candleLit===false && userInput==="walk west"){
-    window.alert("No.  You've killed " + himHer + ".  " + heSheCapital + " couldn't see our 'surprise.'  Not smart to move about in the dark.");
+    window.alert("No.  \nYou've killed " + himHer + ".  \n" + heSheCapital + " couldn't see our 'surprise.'  \n\nNot smart to move about in the dark.\n");
     location.reload();
 
 //post "inventory" (candle lit) commands
 
 }else if (userInput==="inventory"){
-    window.alert("Well done.  You have figured out the first command. Here..." +  heSheCapital + " now has a small candle and a lighter.  It won't last long, but probably longer than " + minutes + " minutes ;)");
+    window.alert("Well done.  \n\nYou figured out the first command and we have dropped " + himHer + " a small candle and a lighter.  \n\nIt won't last long, but probably longer than the " + minutes + " minutes you have left until "+ heShe + " dies anyway \n\n;^]");
     window.alert(heSheCapital + " is very close to the edge of a deep, DEEP hole in the floor.  Thankfully " + heShe + " can now see to move around it safely.");
     candleLit=true;
 
 }else if (candleLit===true && userInput==="look around"){
-    window.alert("In the dim light " + heShe + " can make out four walls - brick.  Uh oh, " + heShe + " says the corners are seeping water ;) " + minutes + " minutes " + seconds + " seconds remaining.");
+    window.alert("In the dim light " + heShe + " can make out four walls - brick.  Uh oh, " + heShe + " says the corners are seeping water. \n \n ;^] " + minutes + " minutes " + seconds + " seconds remaining.");
 
 }else if (candleLit===true && userInput==="face north"){
     currentDirection="north";
@@ -148,7 +149,7 @@ if (candleLit===false && userInput==="look around"){
 
 }else if (currentDirection==="west" && doorOpen===true && userInput==="move forward"){
     window.alert(heSheCapital + " steps to the cavernous opening.  A whistling breeze makes the candle flicker.  " + heSheCapital + " takes the first step toward freedom.");
-    window.alert(" or maybe death ;)");
+    window.alert(" or maybe death \n \n ;^]");
     window.location.href = "https://thomaslthoene.github.io/myCurser/myRoom02.html";
 
 } else window.alert("You wish");

@@ -119,6 +119,7 @@ h1 {
 
 p {
     font-family: 'Kosugi';
+    color: #15b425af;
     font-size: 26px;
     text-align: center;
 }
@@ -138,7 +139,7 @@ a {
 .button {
     display: inline-block;
     border-radius: 4px;
-    background-color: #15bb26;
+    background-color: #118d1d;
     border: none;
     color: rgb(0, 0, 0);
     text-align: center;
