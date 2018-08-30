@@ -1,0 +1,176 @@
+@import url(http://weloveiconfonts.com/api/?family=iconicfill);
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+/* iconicfill */
+[class*="iconicfill-"]:before {
+  font-family: 'IconicFill', sans-serif;
+}
+
+body,html{width:100%;height:100%;}
+body{font-family:'Arvo'; background: #4f3b5b;background: -moz-radial-gradient(center, ellipse cover,  #4f3b5b 0%, #231733 100%);background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4f3b5b), color-stop(100%,#231733));background: -webkit-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: -o-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: -ms-radial-gradient(center, ellipse cover,  #4f3b5b 0%,#231733 100%);background: radial-gradient(ellipse at center,  #4f3b5b 0%,#231733 100%);}
+
+.center{
+ top:50%;
+ transform:translateY(-50%);
+ position:relative;
+ margin:auto;}
+
+input{
+  display:block;
+    width: 200px;
+    padding: 15px 0 15px 12px;
+    font-family: "Arvo";
+    font-weight: 400;
+    color: #377D6A;
+    background: rgba(0,0,0,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    text-indent: 60px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 13px;
+}
+input:focus{
+    text-indent: 12px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2);
+}
+
+label{
+    display: block;
+    position: static;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    font-family: 'Arvo';
+    font-size: 16px;
+}
+
+.wrap-label{
+  width: 300px;
+  height: 00px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  bottom: -15px;
+  overflow: hidden;}
+
+.iconicfill-pen-alt2{
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    font-size:19px;
+    opacity: 1;
+    top: 0;
+    transform:translateX(-100px);
+}
+
+/* ==== Pen animation ==== */
+.move-pen{animation: move-pen 1s ease-in infinite alternate;}
+@keyframes move-pen{
+    from{transform:translateX(-4px) rotate(6deg);}
+    to{transform:translateX(4px) rotate(-3deg);}
+}
+
+.alert{
+    background-color:pink;
+}
+
+img {
+    width: 400px;
+  
+}
+
+.red{
+    color: rgb(107, 0, 0);
+}
+
+body,
+html {
+    background: url(background-parchment.jpg); 
+    background-repeat:no-repeat; 
+    background-attachment: fixed; 
+    background-size:100% 100%;
+    
+}
+
+h1,
+h2 {
+    font-family: 'Creepster';
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    color: rgb(141, 0, 0);
+    margin-top: -20px;
+    padding-top: 50px;
+}
+ 
+.container {
+    vertical-align: 0%;
+    width: 75%;
+    text-align: center;
+    margin: auto auto 1% auto;
+}
+
+p {
+    font-family: 'Creepster';
+    font-size: 26px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+a {
+    color: #49BBAC;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #6b1900;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+    width: 75px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

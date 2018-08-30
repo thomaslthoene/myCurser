@@ -112,10 +112,7 @@ if (candleLit===false && userInput==="look around"){
 
 }else if (currentDirection==="west" && doorOpen===true && userInput==="use door"){
     window.alert("You step to the cavernous opening before you.  A breeze whistles from beyond the light of your candle.  If you knew where you were...WHO you were, you might think this was a grand adventure.  As it is, it feels like certain death.  You take the first halting step down...Welcome To The Curser.");
-
-
-   
-    /* window.location.href = "/Users/ProgClass/Documents/codeslo/mycode/Week-07/1Monday/curser/myRoom02.html"; */
+    window.location.href = "https://thomaslthoene.github.io/myCurser/myRoom02.html";
 
 }else return window.alert("You cannot do that");
 }
