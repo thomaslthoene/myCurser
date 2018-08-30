@@ -1,3 +1,9 @@
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+
+window.onload = timedRefresh(10000);
+
 //the player's inventory.  edit to equal "true" if it makes sense to your room.  There are opportunities to change these later based on player actions later in the function.
 let hasShovel = false;
 let hasKey01 = false;
@@ -9,6 +15,9 @@ let candleLit=false;
 
 //current direction.  edit to equal player's direction on entering the room.  for instance, if they exit the previous room through a door in the north wall, they are still facing north in the new room.
 currentDirection="North";
+let currentVictim=(Math.floor(Math.random() * 9) + 5)
+let currentVictimStatement=("You have activated the game.  Prisoner " + currentVictim + " is now in the room.  Try not to let them die");
+window.alert(currentVictimStatement);
 
 //storyline progress responses.  these will change based on the story of your room.  For instance, if the clue for the end game is on the west wall and they enter "face west", the response string may equal "the numbers 1 and 2 are scrawled on the wall in brownish red liquid.  Could it be blood?"
 let response01="the door is now unlocked";
@@ -46,7 +55,6 @@ function roomTemplate(){
     
 //these are the basic "face" (direction) commands and the results they should display.
 if (candleLit===false && userInput==="look around"){
-    window.alert("You cannot see a thing.  It is pitch black.");
     
 }else if (candleLit===false && userInput==="face north"){
     window.alert("You cannot see a thing.  It is pitch black.");
