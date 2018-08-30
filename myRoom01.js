@@ -19,7 +19,7 @@ let response03="You don't have a key!";
 let faceNorthResponse="You are now facing North.  Hundreds of scratch marks mar the plaster";
 let faceEastResponse="You are now facing East.  Something gleams in the dim light. You have found a key.";
 let faceSouthResponse="You are now facing South.  Someone has sprayed griffiti here.  It says, \"look away from dixieland\"";
-let faceWestResponse="A door of iron bars.  It looks as though it hasn't been opened in ages.  Even though the stairs beyond it lead downward, this appears to be the only exit from your room";
+let faceWestResponse="A door of iron bars.  It looks as though it hasn't been opened in ages.  Even though the stairs beyond it lead downward, this appears to the only escape from your captivity";
 /*
 Available commands are:
 1 "face north"
@@ -117,7 +117,7 @@ if (candleLit===false && userInput==="look around"){
    
     /* window.location.href = "/Users/ProgClass/Documents/codeslo/mycode/Week-07/1Monday/curser/myRoom02.html"; */
 
-}else return window.alert("You cannot do that here");
+}else return window.alert("You cannot do that");
 }
 
 
