@@ -2,7 +2,7 @@ function timedRefresh(timeoutPeriod) {
 	setTimeout("location.reload(true);",timeoutPeriod);
 }
 
-window.onload = timedRefresh(10000);
+window.onload = timedRefresh(100000);
 
 //the player's inventory.  edit to equal "true" if it makes sense to your room.  There are opportunities to change these later based on player actions later in the function.
 let hasShovel = false;
