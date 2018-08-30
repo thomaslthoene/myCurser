@@ -1,8 +1,29 @@
-function timedRefresh(timeoutPeriod) {
-	setTimeout("location.reload(true);",timeoutPeriod);
+function checklength(i) {
+    'use strict';
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
 }
 
-window.onload = timedRefresh(100000);
+var minutes, seconds, count, counter, timer;
+count = 601; //seconds
+counter = setInterval(timer, 1000);
+
+function timer() {
+    'use strict';
+    count = count - 1;
+    minutes = checklength(Math.floor(count / 60));
+    seconds = checklength(count - minutes * 60);
+    if (count < 0) {
+        clearInterval(counter);
+        return;
+    }
+    document.getElementById("timer").innerHTML = 'Next refresh in ' + minutes + ':' + seconds + ' ';
+    if (count === 0) {
+        location.reload();
+    }
+}
 
 //the player's inventory.  edit to equal "true" if it makes sense to your room.  There are opportunities to change these later based on player actions later in the function.
 let hasShovel = false;
