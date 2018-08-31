@@ -48,7 +48,8 @@ let currentPrisoner=(Math.floor(Math.random() * 100))
         currentGender="male";
         heShe="he";
         heSheCapital="He"; //for use at sentence start
-        himHer=himHer="Him";
+        himHer="him";
+        himHerCapital="Him";
     }
 
 //opening alert
@@ -106,12 +107,12 @@ if (candleLit===false && userInput==="look around"){
 //post "inventory" (candle lit) commands
 
 }else if (userInput==="inventory"){
-    window.alert("Well done.  \n\nYou figured out the first command and we have dropped " + himHer + " a small candle and a lighter.  \n\nIt won't last long, but probably longer than the " + minutes + " minutes you have left until "+ heShe + " dies anyway \n\n;^]");
+    window.alert("Well done.  \n\nYou figured out the first command and we dropped " + himHer + " a small candle and a lighter.  \n\nIt won't last long, but probably longer than the " + minutes + " minutes you have left until "+ heShe + " dies anyway \n\n;^]");
     window.alert(heSheCapital + " is very close to the edge of a deep, DEEP hole in the floor.  Thankfully " + heShe + " can now see to move around it safely.");
     candleLit=true;
 
 }else if (candleLit===true && userInput==="look around"){
-    window.alert("In the dim light " + heShe + " can make out four walls - brick.  Uh oh, " + heShe + " says the corners are seeping water. \n \n ;^] " + minutes + " minutes " + seconds + " seconds remaining.");
+    window.alert("In the dim light " + heShe + " can make out four walls - brick.  Uh oh, " + heShe + " says the corners are seeping water. \n \n ;^] \n\n" + minutes + " minutes " + seconds + " seconds remaining.");
 
 }else if (candleLit===true && userInput==="face north"){
     currentDirection="north";
