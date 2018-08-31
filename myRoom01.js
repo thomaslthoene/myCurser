@@ -39,6 +39,8 @@ heShe="she";
 heSheCapital="She"; //for use at sentence start
 himHer="her";
 himHerCapital="Her";
+hisHers="hers";
+hisHersCapital="Hers";
 currentDirection="North";
 
 //gender, set with a random number which then redefines pronouns for future strings based on even/odd.
@@ -50,22 +52,17 @@ let currentPrisoner=(Math.floor(Math.random() * 100))
         heSheCapital="He"; //for use at sentence start
         himHer="him";
         himHerCapital="Him";
+        hisHers="his";
+        hisHersCapital="His";
     }
 
 //opening alert
-let currentPrisonerStatement=("You have activated the game and Prisoner " + currentPrisoner + " is now in the room.  \n\nTry not to let this one die.\n \n;^]");
-window.alert(currentPrisonerStatement);
+window.alert("You have activated the game and Prisoner " + currentPrisoner + " is now in the room.  \n\nTry not to let " + himHer + " die.\n \n;^]");
 
 //storyline progress responses.  
 let response01="The door is now unlocked";
-let response02="The hinges squeal...the rust of ages breaking free.  \nA dark doorway stands before " + himHer + ", but " + heShe + " seems unwilling to move forward.  I wonder why?\n\n ;^]";
+let response02="The hinges squeal...the rust of ages breaking free.  \nA dark doorway stands before " + himHer + ", but " + heShe + " seems unwilling to move forward.  \n\nI wonder why?\n\n ;^]";
 let response03=heSheCapital + " doesn't have a key!";
-
-//gameplay responses.   
-faceNorthResponse=heSheCapital + " is now facing North.  \nScratch marks mar the plaster.";
-faceEastResponse=heSheCapital + " is now facing East.  \nSomething gleams in the dim light. " + heSheCapital + " has found a key. ";
-faceSouthResponse=heSheCapital + " is now facing South.  \nSomeone has sprayed griffiti here.  \nIt says, \"look away from dixieland\"";
-faceWestResponse=heSheCapital + " is now facing west.  \n" + heSheCapital + " sees a locked door of iron bars.  Beyond it stairs...\nleading downward";
 
 function roomTemplate(){
 
@@ -105,31 +102,34 @@ if (candleLit===false && userInput==="look around"){
     location.reload();
 
 //post "inventory" (candle lit) commands
+}else if (candleLit===true && userInput==="inventory"){
+    window.alert("No.\n\n We already gave " + himHer + " a candle.  What more do you expect?  \n\n How ungrateful.");
+    location.reload();
 
 }else if (userInput==="inventory"){
-    window.alert("Well done.  \n\nYou figured out the first command and we dropped " + himHer + " a small candle and a lighter.  \n\nIt won't last long, but probably longer than the " + minutes + " minutes you have left until "+ heShe + " dies anyway \n\n;^]");
+    window.alert("Well done.  \n\nYou finally figured out the first command.  We dropped " + himHer + " a small candle and a lighter.  \n\nIt won\'t stay lit long, but probably longer than the " + minutes + " minutes you have left until "+ heShe + " dies anyway \n\n;^]");
     window.alert(heSheCapital + " is very close to the edge of a deep, DEEP hole in the floor.  Thankfully " + heShe + " can now see to move around it safely.");
     candleLit=true;
 
 }else if (candleLit===true && userInput==="look around"){
-    window.alert("In the dim light " + heShe + " can make out four walls - brick.  Uh oh, " + heShe + " says the corners are seeping water. \n \n ;^] \n\n" + minutes + " minutes " + seconds + " seconds remaining.");
+    window.alert("In the dim light " + heShe + " can make out four walls - brick.  Uh oh, " + heShe + " says the corners are seeping water. \n \n ;^]");
 
 }else if (candleLit===true && userInput==="face north"){
     currentDirection="north";
-    window.alert(faceNorthResponse);
+    window.alert(heSheCapital + " is now facing North.  \n\nScratch marks mar the plaster.\n \n Oooh - scary.\n\n or at least they thought so \n\n;^]");
 
 }else if (candleLit===true && userInput==="face east"){
     currentDirection="east";
-    window.alert(faceEastResponse);
+    window.alert(heSheCapital + " is now facing East.  "+heSheCapital+" notices something at the base of the wall.  It looks like...yes, " + heShe + " has found a key.");
     hasKey01=true; 
 
 }else if (candleLit===true && userInput==="face south"){
     currentDirection="south";
-    window.alert(faceSouthResponse);
+    window.alert(heSheCapital + " is now facing South.  Someone has sprayed griffiti here.  \n\nIt says, \"look away from dixieland\" ");
 
 }else if (candleLit===true && userInput==="face west"){
     currentDirection="west";
-    window.alert(faceWestResponse);
+    window.alert(heSheCapital + " is now facing west. \n \n" + heSheCapital + " sees a locked door of iron bars.  Beyond it stairs...leading downward\n \n ;^]");
 
 }else if (currentDirection==="west" && hasKey01===true && userInput==="use key"){
     window.alert(response01);
@@ -154,7 +154,7 @@ if (candleLit===false && userInput==="look around"){
     window.location.href = "https://thomaslthoene.github.io/myCurser/myRoom02.html";
 
 } else window.alert("You wish");
-   // location.reload();
+  //  location.reload();
 }
 
 
